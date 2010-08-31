@@ -1,0 +1,21 @@
+<div id="basecamp-chrome">
+   JOJOJO
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onUnload = function(){
+    alert("CHALE")
+  }
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+     var bg = chrome.extension.getBackgroundPage().document;
+     var iframe = jQuery(bg).find("iframe")[0]
+     console.debug(iframe)
+     var imported = document.importNode(iframe);
+     jQuery("#basecamp-chrome").append("<h1>HeLLO</h1>")
+     jQuery("#basecamp-chrome").append(imported)
+     jQuery("#basecamp-chrome").append("<h1>bye</h1>")
+     jQuery(imported).unload(function() { alert("CHA") })
+  });
+</script>

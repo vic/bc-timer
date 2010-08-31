@@ -1,0 +1,187 @@
+!!! html5
+%html
+
+  %head
+
+    %title bcwidget
+
+    %meta(name="domain" content="#{params[:domain]}")
+    %meta(name="token" content="#{params[:token]}")
+
+    %meta(http-equiv="Content-Type" 
+      content="text/html; charset=UTF-8")
+    %meta(charset="utf-8")
+    %meta(keywords="basecamp web widget")
+    %meta(name="description" 
+        content="web based basecamp widget")
+    %meta(name="author" content="Victor Hugo Borja")
+    %meta(name="author-email" content="vic.borja@gmail.com")
+
+    %link(type="text/css" rel="stylesheet" href="/css/minibutton.css")
+    %link(type="text/css" rel="stylesheet" href="/css/iphone-style-checkboxes/style.css")
+
+    %link(type="text/css" rel="stylesheet" href="/css/bcwidget.css")
+
+    %script(type="text/javascript" src="/js/json2.js")
+    %script(type="text/javascript" src="/js/underscore-min.js")
+    %script(type="text/javascript" src="/js/less-1.0.33.min.js")
+    %script(type="text/javascript" src="/js/jquery-1.4.2.min.js")
+    %script(type="text/javascript" src="/js/jquery-ui-1.8.4.custom.min.js")
+    %script(type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/")
+    %script(type="text/javascript" src="/js/jquery.ezCookie_0.7.01.min.js")
+    %script(type="text/javascript" src="/js/iphone-style-checkboxes.js")
+    %script(type="text/javascript" src="/js/jquery.timeago.js")
+    %script(type="text/javascript" src="/js/jquery.purr.js")
+    %script(type="text/javascript" src="/js/date.js")
+    %script(type="text/javascript" src="/js/bcwidget.js")
+
+  %body
+    #template.hidden
+      .error
+        .ui-state-error.ui-corner-all 
+          .message
+    .bcwidget
+      <div id="purr-container"></div>
+      .login.ui-widget-overlay
+        %div.infieldLabel
+          %label.bold(for="domain") BaseCamp Domain
+          %input.flat.ui-state-default(name="domain")
+        .reset
+        %div.infieldLabel
+          %label.bold(for="token") Authentication Token
+          %input.flat.ui-state-default(name="token")
+          %a.ui-icon.ui-icon-help.i-icon(name="token-help")
+        %div
+          %input(type="checkbox" name="remember" checked="checked")
+        %div
+          %br
+          %a.minibutton
+            %span
+              %span.ui-icon.ui-icon-check.float-right.left-space
+              %label Login
+      .content.hidden.ui-widget-content.ui-dialog.ui-corner-all.ui-widget
+        .menu.overlay-hidden-x.ui-widget-header.ui-widget-corner-all.ui-helper-clearfix
+          #themes.hidden
+          %img.avatar
+          .back.hidden
+            %a.i-icon.ui-icon.ui-icon-carat-1-w
+          .home-button.inline.ui-button(title = "Show my projects")
+            .ui-corner-all.inline.relative
+              %label Home
+              %span.ui-icon.i-icon.ui-icon-home
+          .today-button.inline.ui-button(title = "Show active tasks")
+            .ui-corner-all.inline.relative
+              %label Today
+              %span.ui-icon.i-icon.ui-icon-clock
+          .todos-button.inline.ui-button(title = "Today project")
+            .ui-corner-all.inline.relative
+              %label Project
+              %span.ui-icon.i-icon.ui-icon-suitcase
+          .relative.inline
+            %span.busy.hidden
+          .relative.float-right
+            %span.ui-icon.i-icon.ui-icon-search
+            %span.ui-icon.i-icon.ui-icon-image(title = "Change Theme")
+            %span.ui-icon.i-icon.ui-icon-help(title = "Help")
+        .pageTitle.ui-state-active.ui-widget-corner-all.ui-helper-clearfix
+          %span.title
+        .slider
+          .mask
+            .page
+              .projects.pageLinks
+                .template.hidden
+                  .added
+                    %span.name
+                    .em2
+              .pixel2
+            .page
+              .actions
+                .today-project.ui-button.ui-corner-all(title="New tasks on today page will be assigned to this project")
+                  %span.ui-icon.i-icon.ui-icon-suitcase
+                  %label Set as today project
+                .today-project-goal.ui-button.ui-corner-all(title="Add a new today goal for this project")
+                  %span.ui-icon.i-icon.ui-icon-clock
+                  %label New Today goal
+                .open-project.basecamp-link.ui-button.ui-corner-all(title="Open project on basecamp")
+                  %span.ui-icon.i-icon.ui-icon-extlink
+                  %label Open project
+                .edit-tasklists.basecamp-link.ui-button.ui-corner-all(title="Edit this project task lists on basecamp")
+                  %span.ui-icon.i-icon.ui-icon-pencil
+                  %label Edit task lists
+              .em1
+              .tasklists.pageLinks
+                .template.hidden
+                  .added
+                    %span.name
+                    .em2
+              .pixel2
+            .page
+              .actions              
+                .edit-tasks.basecamp-link.ui-button.ui-corner-all(title="Edit tasks on this list on basecamp")
+                  %span.ui-icon.i-icon.ui-icon-pencil
+                  %label Edit tasks on this list
+              .em1
+              .todos.pageLinks
+                .template.hidden
+                  .added
+                    %span.name
+                    .em2
+              .pixel2
+            .page
+              .what.infieldLabel
+                %label(for="task") What are you doing?
+                %input.flat.ui-state-default(name="task" 
+                  title="Hit return to add task. Active ones will be paused.")
+                .actions
+                  .inline.add-task.ui-button(title="Add concurrent activity")
+                    .ui-corner-all.inline.relative
+                      %label Add Task
+                      %span.ui-icon.i-icon.ui-icon-plusthick
+                  .inline.brb.ui-button(title = "Pause all active tasks")
+                    .ui-corner-all.inline.relative
+                      %label Be right back
+                      %span.ui-icon.i-icon.ui-icon-pause
+                  .hidden.btw.ui-button(title = "Resume paused tasks")
+                    .ui-corner-all.inline.relative
+                      %label Back to work
+                      %span.ui-icon.i-icon.ui-icon-play
+                  .inline.ui-button(title = "Finish tracking time")
+                    .ui-corner-all.inline.relative
+                      %label Done for today
+                      %span.ui-icon.i-icon.ui-icon-check
+              .tasks.pageLinks
+                .template.hidden
+                  .added.relative
+                    .pixel2
+                    .pixel2
+                    .task
+                      %span.name
+                    .time
+                      %span.ui-icon.i-icon.ui-icon-clock
+                      %span.timer
+                    .pixel2
+                    .pixel2
+                    .pixel2
+                    .actions
+                      .inline.project.ui-button(title = "Project")
+                        .ui-corner-all.inline.relative
+                          %label Project
+                          %span.ui-icon.i-icon.ui-icon-suitcase
+                      .inline.pause.ui-button(title = "Pause activity")
+                        .ui-corner-all.inline.relative
+                          %label Pause
+                          %span.ui-icon.i-icon.ui-icon-pause
+                      .hidden.resume.ui-button(title = "Resume activity")
+                        .ui-corner-all.inline.relative
+                          %label Resume
+                          %span.ui-icon.i-icon.ui-icon-play
+                      .inline.ui-button(title = "Done with this activity")
+                        .ui-corner-all.inline.relative
+                          %label Completed
+                          %span.ui-icon.i-icon.ui-icon-check
+                    .pixel2
+                    .pixel2
+                    .pixel2
+              .pixel2
+        .continuation
+

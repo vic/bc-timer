@@ -1,0 +1,167 @@
+* { margin: 0; padding: 0; }
+body { font-size: 62.5%; font-family: Georgia, serif; }
+.clear { clear: both; }
+h1 { font-size: 3.0em; text-align: center; padding: 10px 0; }
+h1 a { text-decoration: none; color: #212575; }
+h2 { font-size: 2.4em; font-weight: normal; }
+h2 a { text-decoration: none; color: #212575; }
+h3 { font-size: 1.8em; margin-bottom: 8px; }
+p { margin-bottom: 15px; font-size: 1.4em; }
+img { border: none; vertical-align: middle; }
+ul { list-style: disc inside; margin-left: 10px; margin-bottom: 15px; }
+ul li { font-size: 1.4em; }
+
+
+/* bcwidget css */
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.float-reset{
+  float: reset;
+}
+.relative{
+  position: relative;
+}
+.right-space{
+  margin-right: 1em;
+}
+.left-space{
+  margin-left: 1em;
+}
+.space{
+   display: inline
+   margin-right: 1em;
+}
+label {
+}
+.hidden{
+   display:none;
+}
+.inline{
+   display:inline;
+}
+.flat{
+  border-width: 0;
+  border-style: solid;
+}
+.bold{
+  font-weight: bold;
+}
+.i-icon{
+   display:inline;
+   padding-left: 16px;
+}
+.infieldLabel{
+   position: relative;
+}
+.infieldLabel > label{
+   position: absolute;
+   top: 1px;
+   left: 10px;
+}
+.transBg{
+   background-color: transparent;
+}
+.reset{
+   reset: both;
+}
+.bcwidget{
+}
+img.avatar{
+   width: 16px;
+   height: 16px;
+}
+.left-rotate {
+   -webkit-transform: rotate(270deg);
+   -moz-transform: rotate(270deg);
+   -o-transform: rotate(270deg);
+   writing-mode: lr-tb;
+}
+.slider { width: 155px; height: 230px; overflow-x: hidden; position: relative; }
+.mask { width: 1600px; position: relative; left: 0px;}
+.page { width: 155px; float: left; overflow-x: hidden; overflow-y: auto;}
+.menu { height: 1.5em; overflow:hidden; }
+.menu .relative label {
+   display: none
+}
+.menu .relative:hover > label {
+   display: inline
+}
+.actions .relative label {
+   display: none
+}
+.actions .relative:hover > label {
+   display: inline
+}
+.pageLinks > .added:hover {
+   cursor: pointer;
+   margin-top: 2px;
+}
+.pixel2 {
+   height: 2px;
+}
+.overlay-hidden-x {
+   overlay-x: hidden
+}
+.task-add input{
+   width: 80%
+   align: center
+}
+.ui-button:hover{
+   cursor: pointer;
+}
+.busy {
+   background: url("dots-white.gif");
+   width: 20px;
+   height: 5px;
+   position: absolute;
+   top: 0.6em;
+   left: 0em;
+}
+.what {
+   margin-left: 1em;
+   overflow: hidden;
+   margin-bottom: 1em;
+}
+.what label{
+}
+.what input{
+   width: 12em;
+}
+.tasks .added {
+   cursor: normal;
+   margin-bottom: 1px;
+}
+.tasks .actions {
+   display: none;
+}
+.tasks .added:hover .actions {
+   display: inline;
+}
+span.name {
+   width: 10px;
+}
+.right-icons {
+   position: absolute;
+   top: 0px;
+   right: 2em;
+}
+.pageTitle {
+   overflow: hidden;
+   margin-bottom: 1em;
+}
+.em1{
+   height: 1em;
+}
+.em2{
+   height: 2em;
+}
+.absoluteRight{
+   position: absolute;
+   top: 0;
+   right: 0;
+}

@@ -1,0 +1,22 @@
+- domain = params[:domain]
+- token = params[:token]
+- title = "#{(domain+' ') if domain}BaseCamp"
+- url = "http://bc-timer.heroku.com"
+- if domain != ''
+-   url += '/'+domain.to_s
+- if token != ''
+-   url += '/'+token.to_s
+!!! XML
+:plain
+ <Module>
+  <ModulePrefs
+    title="#{title}"
+    author="Victor Hugo Borja"
+    author_link="http://github.com/vic"
+    author_email="vic.borja@gmail.com"
+    description="Time reporting for #{domain} basecamp"
+    width="120"
+    height="350"
+    scaling="false"/>
+   <Content type="url" href="#{url}"/>
+ </Module>
