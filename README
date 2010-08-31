@@ -1,0 +1,28 @@
+
+A tiny html widget for time tracking for basecamp projects.
+
+The goal of this application is to provide an embeddable 
+html page, for tracking a day tasks with basecamp.
+
+You can acess it on:
+
+   http://bc-timer.heroku.com/
+
+It will prompt you for a basecamp domain and api token
+You can obtain the token from the bottom of your profile page on basecamp.
+
+If you provide a basecamp domain on the URI, it will only prompt for the token
+
+    http://bc-timer.heroku.com/mycompany
+
+If you provide the token, the app wil auto login. 
+
+    http://bc-timer.heorku.com/mycomany/xxxxxxx
+
+To add this app as a gmail gadget, just append /gmail.xml to the uri.
+And add that to your gmail account.
+
+   http://bc-timer.heroku.com/mycompany/xxxxx/gmail.xml
+
+
+
