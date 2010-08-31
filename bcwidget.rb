@@ -2,7 +2,11 @@ require 'net/http'
 require 'rubygems'
 require 'sinatra'
 require 'json'
-require 'active_support'
+begin
+  require 'active_support'
+rescue
+  require 'activesupport'
+end
 
 APP_URL = 'http://bc-timer.heroku.com'
 GIST_URL   = 'http://gist.github.com/%s.txt'
