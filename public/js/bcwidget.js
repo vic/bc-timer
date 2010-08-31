@@ -120,7 +120,7 @@
       $(this).removeClass('ui-state-hover')
     })
     $('.menu .ui-icon-home').click(gotoHome)
-    $('.projects > div').live('click',  function() {
+    $('.projects > .added').live('click',  function() {
       var project = $(this).get(0).project
       if(task_awaiting_project) {
         task_awaiting_project(project)
@@ -128,9 +128,14 @@
         loadProject(project)
       }
     })
-    $('.tasklists > div').live('click',  function() {
+    $('.tasklists > .added').live('click',  function() {
       var todo_list = $(this).get(0).todo_list
       loadTodoList(todo_list)
+    })
+    $('.todos > .added').live('click', function() {
+      var todo = $(this).get(0).todo
+      showToday()
+      addTodayTask(todo.content, true, current_project)
     })
     $('.today-button').click(showToday)
     $('.home-button').click(gotoHome)
