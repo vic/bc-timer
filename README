@@ -25,4 +25,20 @@ And add that to your gmail account.
    http://bc-timer.heroku.com/mycompany/xxxxx/gmail.xml
 
 
+Experimental: 
+  - Right now,.. almost everything.
+  - We have an experimental google chrome extension at the chrome/ directory.
 
+Future: 
+  - Work on all browsers
+  - iPhone support, including touching.
+  - Make the heroku app, a twitter client, so it can read time tracking updates
+    from twitter with #bc hashtag . ej. twittering: 
+       brb #bc
+    would mean I'm leaving and will be back soon.
+       now doing this #bc
+  - REST API. 
+    for interacting it from:
+       - the command line ! 
+       - from krunner or gnome-do
+       - and from inside emacs !
