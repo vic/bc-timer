@@ -67,7 +67,7 @@
 
   var styleForms = function () {
     $('#themes').themeswitcher({
-      loadTheme: 'Dark Hive'
+      loadTheme: 'Redmond'
     })
     $('.ui-icon-image').click(function(){
       $('.jquery-ui-themeswitcher-trigger').trigger('click')
