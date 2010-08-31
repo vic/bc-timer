@@ -4,7 +4,7 @@ require 'sinatra'
 require 'json'
 require 'active_support'
 
-APP_URL = 'http://bcwidget.heroku.com'
+APP_URL = 'http://bc-timer.heroku.com'
 GIST_URL   = 'http://gist.github.com/%s.txt'
 GIST_CREATE_URL = 'http://gist.github.com/gists'
 
@@ -63,7 +63,7 @@ get '/download/*' do
 end
 
 
-['/gmail.xml', '/:domain/gmail.xml', '/:domain/:token/gmail.cml'].each { |p| 
+['/gmail.xml', '/:domain/gmail.xml', '/:domain/:token/gmail.xml'].each { |p| 
   get(p) { content_type :xml; haml :gmail } 
 }
 
